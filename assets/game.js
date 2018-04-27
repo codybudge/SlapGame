@@ -12,19 +12,9 @@ function Monster(name, health) {
 }
 //Monster Maker
 var monsters = {
-    monster: new Monster("Monster", 100),
     frank: new Monster("Frankenstien", 100)
 }
 
-
-// var monster = {
-// health: 100,
-// attacks:{
-//     bite: 15,
-//     smash: 30,
-// },
-// items:[]
-// }
 function giveBite() {
     monsters.frank.items.push(items.sheild)
 }
@@ -38,7 +28,7 @@ function Item(name, modifier, description) {
 }
 var items = {
     sheild: new Item("Sheild", 0.3, "A strong shield!"),
-    greatSword: new Item("Great Sword", 20, "A large sword!"),
+    sword: new Item("Sword", 20, "A large sword!"),
     potion: new Item("Potion", 15, "Restore your health!"),
 }
 
@@ -57,7 +47,7 @@ function addMods() {
 
 
 function slap() {
-    monsters.frank.health--
+    monsters.frank.health-- * addMods
     update()
     hitCnt()
 }
@@ -73,12 +63,12 @@ function hitCnt() {
 
 function punch() {
     var modifier = addMods()
-    monsters.frank.health -= 5 * modifier
+    monsters.frank.health -= 5  * addMods
     update()
     hitCnt()
 }
 function kick() {
-    monsters.frank.health -= 10
+    monsters.frank.health -= 10  *addMods
     update()
     hitCnt()
 }
@@ -87,6 +77,7 @@ function update() {
     document.getElementById("health").innerText = monsters.frank.health
     document.getElementById("hits").innerText = monsters.frank.hits
     document.getElementById("name").innerText = monsters.frank.name
+    document.getElementById("")
 
 }
 update()
