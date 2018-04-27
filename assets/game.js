@@ -5,8 +5,13 @@ function Monster(name,health,hits,){
 }
 var monsters={
     Jaggi: new Monster("Jaggi",100,0),
-    ablty:[]
+    abilitys:[]
 }
+function giveBite(){
+    abilitys.push(bite)
+}
+
+
 
 function Item(name,modifier,description){
     this.itemName = name;
