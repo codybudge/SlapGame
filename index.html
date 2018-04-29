@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="assets/game.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title>Slap that Monster</title>
 </head>
 
-<body>
-    <header>Slap That Monster!</header>
+<body class="bgColor">
+    <header class="h1">
+        <h1 class="h1">Slap That Monster!</h1>
+    </header>
 
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col font">
                 <span>Name:
-                    <span id="name">--</span>
+                    <span class="font" id="name">--</span>
                 </span>
                 <div class="container">
                     <div class="row bgFor">
@@ -26,32 +29,36 @@
                             <img src="assets/ratholos.gif" alt="">
                         </div>
                     </div>
-                </div>
-                <button onclick="slap()">Slap</button>
-                <button onclick="punch()">Punch</button>
-                <button onclick="kick()">Kick</button>
-                <span>Health:
-                    <span id="health">--</span>
-                </span>
-                <span> Hits:
-                    <span id="hits">--</span>
-                </span>
+                    <div class="row bgColor">
+                        <div class="col">
 
+                            <button onclick="slap()">Slap</button>
+                            <button onclick="punch()">Punch</button>
+                            <button onclick="kick()">Kick</button>
+
+                        </div>
+                        <span>Health:
+                            <span id="health">--</span>
+                        </span>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <button onclick="sheild()">sheild</button>
-            <button onclick="sword()">Sword</button>
-            <button onclick="potion()">Potion</button>
-            <div class="progress">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="health()" aria-valuemin="health()" aria-valuemax="health()"></div>
-                  </div>
+    <div class="container">
+        <div class="row font">
+            <div class="col bgColor">
+                <button onclick="sheild()">Sheild</button>
+                <button onclick="sword()">Sword</button>
+                <button onclick="potion()">Potion</button>
+            </div>
+            <span> Hits:
+                <span id="hits">--</span>
+            </span>
         </div>
     </div>
-</div>
+    </div>
 
 
     <script src="assets/game.js"></script>
