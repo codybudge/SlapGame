@@ -3,10 +3,6 @@
 function Monster(name, health) {
     this.name = name;
     this.health = health;
-    this.attacks = {
-        bite: 15,
-        smash: 30
-    }
     this.items = []
     this.hits = 0
 }
@@ -30,9 +26,10 @@ function Item(name, modifier, description) {
 }
 var items = {
     sheild: new Item("Sheild", 0.3, "A strong shield!"),
-    sword: new Item("Sword", 20, "A large sword!"),
-    potion: new Item("Potion", 15, "Restore your health!"),
+    sword: new Item("Sword", 2, "A large sword!"),
+    potion: new Item("Potion", -5,"Give you some health")
 }
+
 
 //adds all items modifiers from franks items array
 function addMods() {
@@ -78,6 +75,9 @@ function sheild(){
 }
 function sword(){
     giveFrank(items.sword)
+}
+function potion(){
+    giveFrank(items.potion)
 }
 
 function update() {
