@@ -1,5 +1,5 @@
-// var health = 100
-// var hits=0
+
+
 function Monster(name, health) {
     this.name = name;
     this.health = health;
@@ -15,9 +15,11 @@ var monsters = {
     frank: new Monster("Frankenstien", 100)
 }
 
-function giveBite() {
-    monsters.frank.items.push(items.sheild)
+function giveFrank(itemGiven) {
+    monsters.frank.items.push(itemGiven)
+
 }
+
 
 
 function Item(name, modifier, description) {
@@ -47,7 +49,7 @@ function addMods() {
 
 
 function slap() {
-    monsters.frank.health-- * addMods
+    monsters.frank.health-= 1 * addMods()    
     update()
     hitCnt()
 }
@@ -62,22 +64,25 @@ function hitCnt() {
 
 
 function punch() {
-    var modifier = addMods()
-    monsters.frank.health -= 5  * addMods
+    monsters.frank.health -= 5 * addMods()
     update()
     hitCnt()
 }
 function kick() {
-    monsters.frank.health -= 10  *addMods
+    monsters.frank.health -= 10 * addMods()
     update()
     hitCnt()
+}
+function sheild(){
+    giveFrank(items.sheild)
+}
+function sword(){
+    giveFrank(items.sword)
 }
 
 function update() {
     document.getElementById("health").innerText = monsters.frank.health
     document.getElementById("hits").innerText = monsters.frank.hits
     document.getElementById("name").innerText = monsters.frank.name
-    document.getElementById("")
-
 }
 update()
