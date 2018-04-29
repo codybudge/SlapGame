@@ -27,7 +27,7 @@ function Item(name, modifier, description) {
 var items = {
     sheild: new Item("Sheild", 0.3, "A strong shield!"),
     sword: new Item("Sword", 2, "A large sword!"),
-    potion: new Item("Potion", -5,"Give you some health")
+    potion: new Item("Potion", -2,"Give you some health")
 }
 
 
@@ -43,7 +43,9 @@ function addMods() {
     }
     return 1
 }
+function death(){
 
+}
 
 function slap() {
     monsters.frank.health-= 1 * addMods()    
