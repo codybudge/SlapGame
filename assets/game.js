@@ -8,11 +8,11 @@ function Monster(name, health) {
 }
 //Monster Maker
 var monsters = {
-    frank: new Monster("Frankenstien", 100)
+    rath: new Monster("Rathalos", 100)
 }
 
-function giveFrank(itemGiven) {
-    monsters.frank.items.push(itemGiven)
+function giveRath(itemGiven) {
+    monsters.rath.items.push(itemGiven)
 
 }
 
@@ -31,11 +31,11 @@ var items = {
 }
 
 
-//adds all items modifiers from franks items array
+//adds all items modifiers from raths items array
 function addMods() {
     var total = 0
-    for (var i = 0; i < monsters.frank.items.length; i++) {
-        var item = monsters.frank.items[i];
+    for (var i = 0; i < monsters.rath.items.length; i++) {
+        var item = monsters.rath.items[i];
         total+=item.itemMod
     }
     if (total){
@@ -48,43 +48,43 @@ function death(){
 }
 
 function slap() {
-    monsters.frank.health-= 1 * addMods()    
+    monsters.rath.health-= 1 * addMods()    
     update()
     hitCnt()
 }
 function mnstrName() {
-    monsters.frank.name
+    monsters.rath.name
     update()
 }
 function hitCnt() {
-    monsters.frank.hits++
+    monsters.rath.hits++
     update()
 }
 
 
 function punch() {
-    monsters.frank.health -= 5 * addMods()
+    monsters.rath.health -= 5 * addMods()
     update()
     hitCnt()
 }
 function kick() {
-    monsters.frank.health -= 10 * addMods()
+    monsters.rath.health -= 10 * addMods()
     update()
     hitCnt()
 }
 function sheild(){
-    giveFrank(items.sheild)
+    giveRath(items.sheild)
 }
 function sword(){
-    giveFrank(items.sword)
+    giveRath(items.sword)
 }
 function potion(){
-    giveFrank(items.potion)
+    giveRath(items.potion)
 }
 
 function update() {
-    document.getElementById("health").innerText = monsters.frank.health
-    document.getElementById("hits").innerText = monsters.frank.hits
-    document.getElementById("name").innerText = monsters.frank.name
+    document.getElementById("health").innerText = monsters.rath.health
+    document.getElementById("hits").innerText = monsters.rath.hits
+    document.getElementById("name").innerText = monsters.rath.name
 }
 update()
