@@ -8,7 +8,7 @@ function Monster(name, health) {
 }
 //Monster Maker
 var monsters = {
-    rath: new Monster("Rathalos", 100)
+    rath: new Monster("Rathalos", 250)
 }
 
 function giveRath(itemGiven) {
