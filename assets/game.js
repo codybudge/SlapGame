@@ -15,7 +15,9 @@ function giveRath(itemGiven) {
     monsters.rath.items.push(itemGiven)
 
 }
-
+function resetRath(){
+    monster.rath.health = 250
+}
 
 
 function Item(name, modifier, description) {
@@ -43,9 +45,7 @@ function addMods() {
     }
     return 1
 }
-function death(){
 
-}
 
 function slap() {
     monsters.rath.health-= 1 * addMods()    
@@ -80,9 +80,17 @@ function sword(){
 }
 function potion(){
     giveRath(items.potion)
+
 }
 
-function update() {
+function reset(){
+    resetRath()
+}
+    
+
+    
+    
+    function update() {
     document.getElementById("health").innerText = monsters.rath.health
     document.getElementById("hits").innerText = monsters.rath.hits
     document.getElementById("name").innerText = monsters.rath.name

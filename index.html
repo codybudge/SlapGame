@@ -26,16 +26,19 @@
                 <div class="container">
                     <div class="row bgFor">
                         <div class="col">
-                            <img src="assets/ratholos.gif" alt="">
+                            <img id="rath" src="assets/ratholos.gif" alt="">
                         </div>
                     </div>
                     <div class="row bgColor">
                         <div class="col">
 
                             <button onclick="slap()">Slap</button>
-                            <button onclick="punch()">Punch</button>
-                            <button onclick="kick()">Kick</button>
+                            <button onclick="punch()">Slice</button>
+                            <button onclick="kick()">Stab!!</button>
 
+                            <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
                         </div>
                         <span>Health:
                             <span id="health">--</span>
@@ -51,7 +54,7 @@
             <div class="col bgColor">
                 <button onclick="sheild()">Sheild</button>
                 <button onclick="sword()">Sword</button>
-                <button onclick="potion()">Potion</button>
+                <button onclick="potion()">Healing</button>
             </div>
             <span> Hits:
                 <span id="hits">--</span>
