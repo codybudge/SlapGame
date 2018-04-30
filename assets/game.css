@@ -5,8 +5,8 @@ header.h1{
     color: rgb(181, 198, 149);
 }
 .bgFor{
-    background-image: url(forest.jpg);
-    background-size: 80%;
+    background-image: url(forest.gif);
+    background-size: 100%;
 }
 .bgColor{
     background: rgb(75, 93, 78);
@@ -17,4 +17,8 @@ header.h1{
 }
 .row{
     margin-top: 1rem;
+    
+}
+div.progress{
+    margin-top: 1rem
 }

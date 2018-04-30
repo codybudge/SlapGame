@@ -8,15 +8,17 @@ function Monster(name, health) {
 }
 //Monster Maker
 var monsters = {
-    rath: new Monster("Rathalos", 250)
+    rath: new Monster("Rathalos", 100)
 }
 
 function giveRath(itemGiven) {
     monsters.rath.items.push(itemGiven)
 
 }
-function resetRath(){
-    monster.rath.health = 250
+function deathGif(){
+    if(monsters.rath.health <= 0){
+        document.getElementById("monsterImg").innerHTML = `<img id="rath"src="assets/meat.gif" alt=""></img>`
+    }
 }
 
 
@@ -51,6 +53,7 @@ function slap() {
     monsters.rath.health-= 1 * addMods()    
     update()
     hitCnt()
+    deathGif()
 }
 function mnstrName() {
     monsters.rath.name
@@ -66,11 +69,13 @@ function punch() {
     monsters.rath.health -= 5 * addMods()
     update()
     hitCnt()
+    deathGif()
 }
 function kick() {
     monsters.rath.health -= 10 * addMods()
     update()
     hitCnt()
+    deathGif()
 }
 function sheild(){
     giveRath(items.sheild)
