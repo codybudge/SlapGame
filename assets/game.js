@@ -8,7 +8,8 @@ function Monster(name, health) {
 }
 //Monster Maker
 var monsters = {
-    rath: new Monster("Rathalos", 100)
+    rath: new Monster("Rathalos", 100),
+    dob: new Monster('Diablose', 1000)
 }
 
 function giveRath(itemGiven) {
@@ -48,15 +49,6 @@ function addMods() {
     return 1
 }
 
-
-function slap() {
-    monsters.rath.health -= 1 * addMods()
-    //hitCnt is also calling update, reduce the draws to the screen by eliminating one of those instances
-    update()
-    hitCnt()
-    deathGif()
-}
-
 //this function never gets used nor does it do anything at the moment
 function mnstrName() {
     monsters.rath.name
@@ -66,6 +58,14 @@ function mnstrName() {
 function hitCnt() {
     monsters.rath.hits++
     update()
+}
+
+function slap() {
+    monsters.rath.health -= 1 * addMods()
+    //hitCnt is also calling update, reduce the draws to the screen by eliminating one of those instances
+    update()
+    hitCnt()
+    deathGif()
 }
 
 // how could you combine slap punch and kick into one function?
